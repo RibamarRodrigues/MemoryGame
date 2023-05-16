@@ -1,0 +1,61 @@
+.end-screen{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    word-wrap: break-word;
+    background-color: var(--color-final-game-bg);
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    font-size: 36px;
+}
+
+.end-screen > h1{
+    font-size: 64px;
+}
+
+.end-screen-buttons{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 80%;
+}
+
+.end-screen-buttons > button{
+    width: 175px;
+    height: 75px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: .3s ease-in-out;
+}
+
+.home{
+    background-color: var(--color-final-game-home);
+    box-shadow: 5px 5px var(--color-final-game-try-again);
+}
+
+.home:hover{
+    background-color: black;
+    color: var(--color-final-game-try-again);
+}
+
+.try-again{
+    background-color: var(--color-final-game-try-again);
+    box-shadow: 5px 5px var(--color-final-game-home);
+}
+
+.try-again:hover{
+    background-color: black;
+    color: var(--color-final-game-home);
+}
