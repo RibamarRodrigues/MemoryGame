@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    max-width: 252px;
+    height: 202px;
+    display: block;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip{
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+
+.back{
+    transform: rotateY(180deg);
+    background-color: var(--color-body-bg);
+}
+
+.front, .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.container.clicked .flip{
+    transform: rotateY(180deg);
+}

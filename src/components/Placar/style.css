@@ -1,0 +1,76 @@
+.placar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--color-board-game-bg);
+    font-size: 36px;
+    transition: .3s;
+}
+
+.placar.fixed{
+    position: fixed;
+    top: 10px;
+    max-width: 1200px;
+    z-index: 1;
+}
+
+.score{
+    background-color: var(--color-body-bg);
+    color: var(--color-board-game-text2);
+    padding: 0 7px;
+    text-align: center;
+}
+
+p:has(.movements){
+    flex-basis: 320px;
+}
+
+p:has(.timer){
+    flex-basis: 250px;
+}
+
+#multi > p.current{
+    position: relative;
+    text-decoration: underline var(--color-body-bg);
+}
+
+#multi > p.current::after{
+    content:'';
+    position:absolute;
+    top: -3px;
+    left: -20px;
+    width:0;
+    height:0;
+    border:21px solid transparent;
+    border-left: 15px solid var(--color-body-bg);
+}
+#multi > p.current::before{
+    content:'';
+    position:absolute;
+    top: -3px;
+    left: -20px;
+    width:0;
+    height:0;
+    border: 21px solid transparent;
+    border-left: 15px solid var(--color-body-bg);
+}
+
+
+.error-message{
+    color: var(--color-error-message);
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.error-message.visible{
+    opacity: 1;
+}

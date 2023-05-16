@@ -1,0 +1,22 @@
+:root {
+    --color-body-bg: #D9D9D9;
+
+    --colors-rules-bg: #404040;
+    --color-home-text: black;
+    --color-home-text2: white;
+    --color-home-button: black;
+    --color-easy-button: #00FE19;
+    --color-medium-button: #FED500;
+    --color-hard-button: #FE0000;
+    --color-error-message: #FE0000;
+
+    --color-board-game-bg: #404040;
+    --color-board-game-text: white;
+    --color-board-game-text2: black;
+
+    --color-final-game-bg: #05AADE;
+    --color-final-game-win: #02D217;
+    --color-final-game-lose: #FE0000;
+    --color-final-game-try-again: #EB5500;
+    --color-final-game-home: #FFD481;
+}

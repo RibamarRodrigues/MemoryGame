@@ -1,0 +1,177 @@
+body{
+    font-family: 'Sigmar One', cursive;
+}
+
+/* Estilização primeira pagina - Home Page */
+.home-page{
+    height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-page > h1{
+    font-size: 64px;
+    text-align: center;
+}
+
+.start{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.start > button{
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: var(--color-home-button);
+    color: var(--color-home-text2);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.last-btns{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rules, .back-btn{
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--color-home-button);
+    color: var(--color-home-text2);
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.back-btn{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.back-btn.visible{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.rules{
+    grid-column: 3/4;
+}
+
+.geral{
+    width: 100%;
+}
+
+.single-player, .multi-player{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.player-name input{
+    border: none;
+    outline: none;
+    background-color: var(--color-home-bg);
+    border-bottom: 2px solid var(--color-home-text);
+    font-size: 24px;
+    transition: .3s;
+}
+
+.player-name input.error{
+    border-bottom: 2px solid var(--color-error-message);
+}
+
+.difficulty{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 100px);
+    font-size: 24px;
+    align-self: start;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 20px;
+    font-size: 24px;
+    display: none;
+}
+
+.difficulty > button{
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--color-home-text);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    grid-column: 2/3;
+}
+
+.difficulty > .start-game{
+    width: 250px;
+    height: 100px;
+    background-color: var(--color-board-game-bg);
+    color: var(--color-easy-button);
+    text-shadow: -2px 2px 0 #000,
+    2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000;
+    font-size: 24px;
+}
+
+input[name="difficulty"] {
+    all: unset;
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--color-home-text);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+#easy::after{
+    position: absolute;
+    content: 'Easy';
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -22px;
+}
+#medium::after{
+    position: absolute;
+    content: 'Medium';
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -35px;
+}
+#hard::after{
+    position: absolute;
+    content: 'Hard';
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -25px;
+}
+
+#easy:checked{
+    background-color: var(--color-easy-button);
+}
+
+#medium:checked{
+    background-color: var(--color-medium-button);
+}
+
+#hard:checked{
+    background-color: var(--color-hard-button);
+}
