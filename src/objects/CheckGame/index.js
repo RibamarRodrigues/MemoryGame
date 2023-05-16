@@ -1,6 +1,8 @@
+import VerifyEndGame from "../EndGame"
+
 function CheckGame(event){
-    const test = document.querySelector('.placar')
-    const id = test.getAttribute('id')
+    const placar = document.querySelector('.placar')
+    const id = placar.getAttribute('id')
     const current = document.querySelector('.current')
     const points = current.querySelector('.score')
 
@@ -8,27 +10,14 @@ function CheckGame(event){
 
     if(event[0] == event[2]) {
         points.textContent++
+        VerifyEndGame(id)
     } else {
-        if (id=="multi") ChangeUser(test)
+        if (id=="multi") ChangeUser(placar)
 
         event[1].classList.remove('clicked')
         event[3].classList.remove('clicked')
     }
-
-    EndGame(points.textContent)
 }
-
-function EndGame(points) {
-    let test = document.querySelectorAll('.score')
-    test.forEach(a => {
-        console.log(typeof Number(a.textContent))
-    })
-    // test = Array.from(test).reduce((a,b)=> Number(a)+Number(b))
-
-    const cards = document.querySelectorAll('.container')
-    //console.log(`Número de cartas: ${cards.length}`)
-}
-
 
 function ChangeUser(event) {
     const players = Array.from(event.querySelectorAll('p'))

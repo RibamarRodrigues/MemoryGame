@@ -1,6 +1,7 @@
 let ss = 0
 let mn = 0
-function Timer(time, cron) {
+function Timer(cron) {
+    const time = document.querySelector('.timer')
     ss++
     if(ss == 60){
         ss = 0

@@ -26,9 +26,8 @@ function StartGame() {
         card.par = document.querySelector('#choise')
     })
 
-    const time = document.querySelector('.timer')
     let cron = setInterval(()=> {
-        Timer(time, cron)
+        Timer(cron)
     }, 1000)
 }
 
