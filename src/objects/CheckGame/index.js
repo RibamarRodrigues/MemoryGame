@@ -21,14 +21,8 @@ function CheckGame(event){
 
 function ChangeUser(event) {
     const players = Array.from(event.querySelectorAll('p'))
-    const search = event.querySelector('.current')
-    if (players.indexOf(search) == 0){
-        players[0].classList.remove('current')
-        players[2].classList.add('current')
-    } else {
-        players[0].classList.add('current')
-        players[2].classList.remove('current')
-    }
+    players[0].classList.toggle('current')
+    players[2].classList.toggle('current')
 }
 
 export default CheckGame

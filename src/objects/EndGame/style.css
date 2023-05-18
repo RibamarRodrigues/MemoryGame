@@ -20,6 +20,11 @@
 
 .end-screen > h1{
     font-size: 64px;
+    color: var(--color-final-game-win);
+    text-shadow: -2px 2px 0 #000,
+    2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000;
 }
 
 .end-screen-buttons{

@@ -17,6 +17,7 @@
     --color-final-game-bg: #05AADE;
     --color-final-game-win: #02D217;
     --color-final-game-lose: #FE0000;
+    --color-final-game-draw: #350483;
     --color-final-game-home: #FFD481;
     --color-final-game-try-again: #EB5500;
 }

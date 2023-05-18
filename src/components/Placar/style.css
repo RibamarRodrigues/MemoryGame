@@ -13,13 +13,6 @@
     transition: .3s;
 }
 
-.placar.fixed{
-    position: fixed;
-    top: 10px;
-    max-width: 1200px;
-    z-index: 1;
-}
-
 .score{
     background-color: var(--color-body-bg);
     color: var(--color-board-game-text2);
