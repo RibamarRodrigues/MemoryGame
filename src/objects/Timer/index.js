@@ -1,7 +1,8 @@
 let ss = 0
 let mn = 0
-function Timer(cron) {
+function Timer() {
     const time = document.querySelector('.timer')
+    console.log('começou')
     ss++
     if(ss == 60){
         ss = 0
@@ -9,8 +10,15 @@ function Timer(cron) {
     }
     if (mn == 60) clearInterval(cron)
     let format = (mn < 10 ? `0${mn}` : mn) + ":" + (ss < 10 ? `0${ss}` : ss)
-
     time.textContent = format
 }
 
-export default Timer
+function StartTimer() {
+    window.cron = setInterval(Timer, 1000)
+}
+
+function StopTimer() {
+    clearInterval(cron)
+}
+
+export {StartTimer, StopTimer}

@@ -1,19 +1,25 @@
 import './style.css'
+import { StopTimer } from '../Timer'
+import EndBtns from '../EndBtns'
 
 function VerifyEndGame(gameMode) {
     const cards = document.querySelectorAll('.container')
     const Scores = document.querySelectorAll('.score')
     let points = []
-    //EndGame(gameMode)
-    
+
+    EndGame(gameMode, Scores)
     if (gameMode == "single") {
-        if (cards.length/2 == Scores[0].textContent) 
+        if (cards.length/2 == Scores[0].textContent) {
             EndGame(gameMode, Scores)
+            StopTimer()
+        }
     } else {
         Scores.forEach(e => points.push(Number(e.textContent)))
         points = points.reduce((a,b) => a+b)
-        if (cards.length/2 == points) 
+        if (cards.length/2 == points) {
             EndGame(gameMode, Scores)
+            StopTimer()
+        } 
     }
 }
 
@@ -54,6 +60,8 @@ function EndGame(gameMode, Scores) {
             PlayerWinsHtml.style.color = "var(--color-final-game-draw)"
         }
     }
+
+    EndBtns()
 }
 
 function HtmlEndGame(GameMode, Time, PlayerWins) {

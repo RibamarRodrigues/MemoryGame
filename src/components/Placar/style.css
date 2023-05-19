@@ -5,27 +5,32 @@
     flex-wrap: wrap;
     gap: 5px;
     width: 100%;
+    height: 60px;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 0 20px;
     border-radius: 10px;
     background-color: var(--color-board-game-bg);
     font-size: 36px;
     transition: .3s;
 }
 
-.score{
+.placar > div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.placar > div > span{
+    margin-left: 10px;
+}
+
+
+.score > span{
     background-color: var(--color-body-bg);
     color: var(--color-board-game-text2);
     padding: 0 7px;
     text-align: center;
-}
-
-p:has(.movements){
-    flex-basis: 320px;
-}
-
-p:has(.timer){
-    flex-basis: 250px;
+    height: 100%;
 }
 
 #multi > p.current{

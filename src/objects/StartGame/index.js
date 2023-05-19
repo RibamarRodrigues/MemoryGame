@@ -1,34 +1,36 @@
 import BoardGame from "../../components/BoardGame"
 import RevealCard from "../RevealCard"
-import Timer from "../Timer"
+import { StartTimer } from "../Timer"
 
-function StartGame() {
-    const player1Name = document.querySelector('#player1').value
-    const player2Name = document.querySelector('#player2') ? document.querySelector('#player2').value : ''
 
+function StartFromHomePage() {
+    const Player1Name = document.querySelector('#player1').value
+    const Player2Name = document.querySelector('#player2') ? document.querySelector('#player2').value : ''
+    
     if (VerifyError()) return
-
+    
     let difficulty = document.querySelectorAll('input[name="difficulty"]')
     difficulty = Array.from(difficulty).filter(e => e.checked)
     difficulty = difficulty[0].getAttribute('id')
-    
-    const $htmlBoardGame = BoardGame(player1Name, player2Name, difficulty)
+
+    StartGame(Player1Name, Player2Name, difficulty)
+}
+
+function StartGame(Player1Name, Player2Name, difficulty) {
+    const $htmlBoardGame = BoardGame(Player1Name, Player2Name, difficulty)
 
     const $root = document.querySelector('#root')
     while($root.firstChild){
         $root.removeChild($root.firstChild)
     }
-    $root.insertAdjacentHTML("Beforeend", $htmlBoardGame)
 
+    $root.insertAdjacentHTML("Beforeend", $htmlBoardGame)
+    StartTimer()
+    
     const cardsClick = document.querySelectorAll('.container')
     cardsClick.forEach(card=>{
         card.addEventListener("click", RevealCard)
-        card.par = document.querySelector('#choise')
     })
-
-    let cron = setInterval(()=> {
-        Timer(cron)
-    }, 1000)
 }
 
 function VerifyError() {
@@ -61,4 +63,4 @@ function VerifyError() {
     else return false
 }
 
-export default StartGame
+export {StartFromHomePage, StartGame}

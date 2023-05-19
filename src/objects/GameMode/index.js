@@ -1,6 +1,6 @@
 import SinglePlayer from "../SinglePlayer"
 import MultiPlayer from "../MultiPlayer"
-import StartGame from "../StartGame"
+import { StartFromHomePage } from "../StartGame"
 
 function GameMode(event) {
     const $origin = event.target
@@ -23,7 +23,7 @@ function GameMode(event) {
     document.querySelector('.back-btn').classList.add('visible')
     
     const startGameBtn = document.querySelector('.start-game')
-    startGameBtn.addEventListener('click', StartGame)
+    startGameBtn.addEventListener('click', StartFromHomePage)
 }
 
 export default GameMode
