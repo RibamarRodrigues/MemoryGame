@@ -3,9 +3,6 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 5px;
-    width: 100%;
-    padding: 0 20px;
     border-radius: 10px;
     background-color: var(--color-board-game-bg);
     font-size: 36px;
@@ -25,7 +22,6 @@
     display: flex;
     align-items: center;
     height: 60px;
-    flex-basis: 1;
 }
 
 .placar > div > span{
@@ -40,12 +36,23 @@
     height: 100%;
 }
 
-#multi > p.current{
+.movements {
+    width: 100%;
+    max-width: 320px;
+}
+
+.timer {
+    width: 100%;
+    max-width: 250px;
+}
+
+
+#multi > .current{
     position: relative;
     text-decoration: underline var(--color-body-bg);
 }
 
-#multi > p.current::after{
+#multi > .current::after{
     content:'';
     position:absolute;
     top: -3px;
@@ -56,7 +63,7 @@
     border-left: 15px solid var(--color-body-bg);
 }
 
-#multi > p.current::before{
+#multi > .current::before{
     content:'';
     position:absolute;
     top: -3px;

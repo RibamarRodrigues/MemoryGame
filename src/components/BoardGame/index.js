@@ -7,9 +7,9 @@ function BoardGame(Player1Name, Player2Name, Difficulty) {
     const placar = Placar(Player1Name, Player2Name)
 
     return `
-    <main id="${Difficulty}">
+    <main>
         ${placar}
-        <section class="board-game">
+        <section class="board-game" id="${Difficulty}">
             ${cardGame}
         </section>
     </main>

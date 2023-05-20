@@ -2,7 +2,6 @@ body{
     font-family: 'Sigmar One', cursive;
 }
 
-/* Estilização primeira pagina - Home Page */
 .home-page{
     height: 100vh;
     max-width: 800px;
@@ -23,6 +22,16 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .start{
+        justify-content: center;
+        gap: 20px;
+    }
+    .home-page > h1{
+        font-size: 56px;
+    }
 }
 
 .start > button{
@@ -66,42 +75,16 @@ body{
     grid-column: 3/4;
 }
 
-.geral{
-    width: 100%;
-}
-
-.single-player, .multi-player{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-self: flex-start;
-    gap: 20px;
-    font-size: 24px;
-}
-
-.player-name input{
-    border: none;
-    outline: none;
-    background-color: var(--color-home-bg);
-    border-bottom: 2px solid var(--color-home-text);
-    font-size: 24px;
-    transition: .3s;
-}
-
-.player-name input.error{
-    border-bottom: 2px solid var(--color-error-message);
-}
-
 .difficulty{
     display: grid;
     grid-template-columns: 1fr repeat(3, 100px);
-    font-size: 24px;
     align-self: start;
     align-items: center;
-    column-gap: 10px;
+    justify-items: center;
     row-gap: 20px;
-    font-size: 24px;
     display: none;
+    font-size: 24px;
+    margin-top: 20px;
 }
 
 .difficulty > button{
@@ -112,7 +95,8 @@ body{
     border: none;
     font-size: 16px;
     cursor: pointer;
-    grid-column: 2/3;
+    grid-column: 2/5;
+    align-self: center;
 }
 
 .difficulty > .start-game{
@@ -139,21 +123,21 @@ input[name="difficulty"] {
     position: relative;
 }
 
-#easy::after{
+input#easy::after{
     position: absolute;
     content: 'Easy';
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-#medium::after{
+input#medium::after{
     position: absolute;
     content: 'Medium';
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-#hard::after{
+input#hard::after{
     position: absolute;
     content: 'Hard';
     left: 50%;
@@ -161,27 +145,27 @@ input[name="difficulty"] {
     transform: translate(-50%, -50%);
 }
 
-#easy:checked{
+input#easy:checked{
     background-color: var(--color-easy-button);
 }
 
-#medium:checked{
+input#medium:checked{
     background-color: var(--color-medium-button);
 }
 
-#hard:checked{
+input#hard:checked{
     background-color: var(--color-hard-button);
 }
 
-.error-message{
-    color: var(--color-error-message);
-    font-size: 16px;
-    text-align: center;
-    margin-top: 10px;
-    opacity: 0;
-    transition: .3s;
-}
-
-.error-message.visible{
-    opacity: 1;
+@media (max-width: 650px) {
+    .difficulty{
+        grid-template-columns: repeat(3, 100px);
+        align-self: center;
+    }
+    .difficulty > p{
+        grid-column: 1/4;
+    }
+    .difficulty > button{
+        grid-column: 1/4;
+    }
 }

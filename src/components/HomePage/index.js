@@ -17,7 +17,6 @@ function HomePage() {
             <input type="radio" name="difficulty" id="hard">
             <button class="start-game">Start</button>
         </div>
-
         <div class= "last-btns">
             <button class="back-btn" id="back">Back</button>
             <button class="rules">Rules</button>

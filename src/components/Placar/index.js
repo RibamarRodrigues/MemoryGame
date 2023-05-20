@@ -4,7 +4,7 @@ function Placar(player1, player2) {
     if (player2 == '') {
         return `
         <div class='placar' id="single">
-            <div class='player1 current score'>
+            <div class='player1 score current'>
                 <p>${player1}</p>
                 <Span>0</Span>
             </div>
@@ -22,7 +22,7 @@ function Placar(player1, player2) {
     } else {
         return `
         <div class='placar' id="multi">
-            <div class="player1 current score">
+            <div class="player1 score current">
                 <p>${player1} </p>
                 <Span>0</Span>
             </div>

@@ -4,20 +4,20 @@ import { StartTimer } from "../Timer"
 
 
 function StartFromHomePage() {
+    if (VerifyError()) return
+    
     const Player1Name = document.querySelector('#player1').value
     const Player2Name = document.querySelector('#player2') ? document.querySelector('#player2').value : ''
     
-    if (VerifyError()) return
-    
-    let difficulty = document.querySelectorAll('input[name="difficulty"]')
-    difficulty = Array.from(difficulty).filter(e => e.checked)
-    difficulty = difficulty[0].getAttribute('id')
+    let Difficulty = document.querySelectorAll('input[name="difficulty"]')
+    Difficulty = Array.from(Difficulty).filter(e => e.checked)
+    Difficulty = Difficulty[0].getAttribute('id')
 
-    StartGame(Player1Name, Player2Name, difficulty)
+    StartGame(Player1Name, Player2Name, Difficulty)
 }
 
-function StartGame(Player1Name, Player2Name, difficulty) {
-    const $htmlBoardGame = BoardGame(Player1Name, Player2Name, difficulty)
+function StartGame(Player1Name, Player2Name, Difficulty) {
+    const $htmlBoardGame = BoardGame(Player1Name, Player2Name, Difficulty)
 
     const $root = document.querySelector('#root')
     while($root.firstChild){

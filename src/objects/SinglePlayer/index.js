@@ -1,7 +1,9 @@
+import './style.css' 
+
 function SinglePlayer() {
     return `
     <div class="player-name single-player">
-        <div>
+        <div class="error-box">
             <label for="player">Your Name:</label>
             <input type="text" name="player" id="player1" maxlength="16"></input>
             <p class="error-message">Choose a name</p>

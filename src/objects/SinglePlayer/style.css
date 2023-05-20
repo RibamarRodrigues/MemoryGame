@@ -1,0 +1,56 @@
+.geral{
+    width: 100%;
+}
+
+.single-player, .multi-player{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.error-box{
+    position: relative;
+}
+
+.player-name input{
+    border: none;
+    outline: none;
+    background-color: var(--color-home-bg);
+    border-bottom: 2px solid var(--color-home-text);
+    font-size: 24px;
+    transition: .3s;
+}
+
+.player-name input.error{
+    border-bottom: 2px solid var(--color-error-message);
+}
+
+.error-message{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-error-message);
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.error-message.visible{
+    opacity: 1;
+}
+
+@media (max-width: 650px) {
+    .player-name{
+        justify-content: center;
+        text-align: center;
+    }
+    .error-box{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,8 +1,6 @@
-let ss = 0
-let mn = 0
 function Timer() {
     const time = document.querySelector('.timer > span')
-    console.log('começou')
+    
     ss++
     if(ss == 60){
         ss = 0
@@ -15,6 +13,8 @@ function Timer() {
 
 function StartTimer() {
     window.cron = setInterval(Timer, 1000)
+    window.ss = 0
+    window.mn = 0
 }
 
 function StopTimer() {
