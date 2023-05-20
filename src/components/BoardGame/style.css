@@ -5,6 +5,7 @@ main{
     gap: 20px;
     margin: 0 auto;
     color: var(--color-board-game-text);
+    position: relative;
 }
 
 .board-game{

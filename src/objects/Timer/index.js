@@ -1,7 +1,7 @@
 let ss = 0
 let mn = 0
 function Timer() {
-    const time = document.querySelector('.timer')
+    const time = document.querySelector('.timer > span')
     console.log('começou')
     ss++
     if(ss == 60){

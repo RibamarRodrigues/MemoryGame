@@ -144,24 +144,21 @@ input[name="difficulty"] {
     content: 'Easy';
     left: 50%;
     top: 50%;
-    margin-top: -10px;
-    margin-left: -22px;
+    transform: translate(-50%, -50%);
 }
 #medium::after{
     position: absolute;
     content: 'Medium';
     left: 50%;
     top: 50%;
-    margin-top: -10px;
-    margin-left: -35px;
+    transform: translate(-50%, -50%);
 }
 #hard::after{
     position: absolute;
     content: 'Hard';
     left: 50%;
     top: 50%;
-    margin-top: -10px;
-    margin-left: -25px;
+    transform: translate(-50%, -50%);
 }
 
 #easy:checked{
@@ -174,4 +171,17 @@ input[name="difficulty"] {
 
 #hard:checked{
     background-color: var(--color-hard-button);
+}
+
+.error-message{
+    color: var(--color-error-message);
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.error-message.visible{
+    opacity: 1;
 }

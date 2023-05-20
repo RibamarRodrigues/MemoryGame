@@ -22,14 +22,20 @@ function Placar(player1, player2) {
     } else {
         return `
         <div class='placar' id="multi">
-            <p class="player1 current">${player1} </p>
-            <Span class='score'>0</Span>
+            <div class="player1 current score">
+                <p>${player1} </p>
+                <Span>0</Span>
+            </div>
 
-            <p>Time: </p>
-            <Span class="timer">00:00</Span>
+            <div class="timer">
+                <p>Time: </p>
+                <Span>00:00</Span>
+            </div>
 
-            <p class="player2">${player2} </p>
-            <Span class='score'>0</Span>
+            <div class="player2 score">
+                <p>${player2} </p>
+                <Span>0</Span>
+            </div>
         </div>`
     }
 }

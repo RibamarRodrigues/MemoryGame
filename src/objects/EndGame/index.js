@@ -4,7 +4,8 @@ import EndBtns from '../EndBtns'
 
 function VerifyEndGame(gameMode) {
     const cards = document.querySelectorAll('.container')
-    const Scores = document.querySelectorAll('.score')
+    const Scores = document.querySelectorAll('.score > span')
+    console.log(Scores)
     let points = []
 
     EndGame(gameMode, Scores)

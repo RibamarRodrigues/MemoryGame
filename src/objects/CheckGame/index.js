@@ -4,9 +4,9 @@ function CheckGame(event){
     const placar = document.querySelector('.placar')
     const id = placar.getAttribute('id')
     const current = document.querySelector('.current')
-    const points = current.querySelector('.score')
+    const points = current.querySelector('.score > span')
 
-    if (id=="single") document.querySelector('.movements').textContent++
+    if (id=="single") document.querySelector('.movements > span').textContent++
 
     if(event[0] == event[2]) {
         points.textContent++
