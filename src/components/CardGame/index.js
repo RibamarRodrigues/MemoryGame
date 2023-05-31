@@ -14,8 +14,8 @@ function CardGame(difficulty) {
         return `
         <div class="container">
             <div class="flip">
-                <img src="../public/fundo.jpg" class="front" data-image="${card}" alt="fundo do card game">
-                <img src="../public/${card}.svg" class="back" alt="${card} do card game">
+                <img src="/public/fundo.jpg" class="front" data-image="${card}" alt="fundo do card game">
+                <img src="public/${card}.svg" class="back" alt="${card} do card game">
             </div>
         </div>`
     })
